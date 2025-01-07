@@ -1638,67 +1638,7 @@ h1 {
   h1 {
       font-size: 2em;
   }
-}
-.audio-player {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: transparent;
-        }
-
-        /* Estilo para el slider de volumen */
-        .volume-slider {
-            width: 1px;
-            background-color: transparent;
-        }
-
-        /* Personalización del control de progreso */
-        .audio-player input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 2px;
-            height: 5px;
-            background: #ddd;
-            border-radius: 5px;
-            outline: none;
-            cursor: pointer;
-        }
-
-        .audio-player input[type="range"]:focus {
-            background: #bbb;
-        }
-
-        .audio-player input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 2px;
-            height: 2px;
-            background: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .audio-player input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        /* Estilo para el volumen */
-        .volume-btn {
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
+}  
     </style>
   </head>
   <body class="container">
@@ -2019,50 +1959,11 @@ h1 {
         </div>
       </div>
     </div>
-    <div class="audio-player">
-      <!-- Reproductor de audio -->
-      <audio id="audio" loop>
-          <source src="Best Part.mp3" type="audio/mp3">
-          Tu navegador no soporta el elemento de audio.
-      </audio>
-      <!-- Control de progreso -->
-      <input type="range" id="progress-bar" value="0" step="1" max="100" onchange="seekAudio(event)">
-
-      <!-- Control de volumen -->
-      <button class="volume-btn" onclick="toggleMute()">
-          🔊
-      </button>
-      <input type="range" class="volume-slider" id="volume-control" value="100" max="100" onchange="changeVolume(event)">
-  </div>
-  <div class="audio-player">
-    <!-- Reproductor de audio con autoplay -->
-    <audio id="audio" autoplay loop>
-        <source src="Best Part.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-<script>
-    const audio = document.getElementById('audio');
-    const progressBar = document.getElementById('progress-bar');
-    const volumeControl = document.getElementById('volume-control');
-    const volumeBtn = document.querySelector('.volume-btn');
-
-    // Cambia el volumen
-    function changeVolume(event) {
-        audio.volume = event.target.value / 100;
-    }
-
-    // Mute/Unmute el volumen
-    function toggleMute() {
-        if (audio.volume > 0) {
-            audio.volume = 0;
-            volumeControl.value = 0;
-        } else {
-            audio.volume = 1;
-            volumeControl.value = 100;
-        }
-    }
-</script>
-
-
+<div class="audio-player">
+        <!-- Reproductor de audio con autoplay -->
+        <audio id="audio" autoplay loop >
+            <source src="Best Part.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio> 
   </body>
 </html>
