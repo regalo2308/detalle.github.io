@@ -1639,16 +1639,14 @@ h1 {
       font-size: 2em;
   }
 }
-audio {
-            display: none;
-        }
+
     </style>
   </head>
   <body class="container">
     <h1 class="titulo">
       
       Recuerda eres alguien inteligente, que no se da por vencido y que se esfuerza mucho y eres "Unica" . 
-      Siempre contaras conmigo en lo que sea, apoyándote en todo, porque sé que lograrás todo lo que te propongas(Ingresar a la Uni :b). 
+      Siempre contaras conmigo en lo que sea y sé que lograrás todo lo que te propongas(Ingresar a la Uni :b). 
       ¡Cree en ti misma tanto como yo creo en ti! Shantiii  🌟❤️</h1>
   
     <div class="night"></div>
@@ -1958,17 +1956,19 @@ audio {
         </div>
         <div class="grow-ans" style="--d: 3.6s">
           <div class="leaf leaf--3"></div>
-          <audio autoplay loop>
-            <source src="/Best Part.mp3" type="audio/mpeg">
-            Tu navegador no soporta la reproducción de audio.
+          <audio id="miMusica" loop>
+            <source src="Best Part.mp3" type="audio/mp3">
         </audio>
+        
         </div>
       </div>
     </div>
     <script>
-      // Ajustar volumen de audio
-      const audio = document.querySelector('audio');
-        audio.volume = 0.2; // Volumen reducido
-    </script>
+      function reproducirMusica() {
+          var musica = document.getElementById("miMusica");
+          musica.volume = 0.1; // Establece el volumen bajo
+          
+      }
+  </script>
   </body>
 </html>
